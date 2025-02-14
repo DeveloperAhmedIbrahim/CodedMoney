@@ -870,11 +870,11 @@
 												class="eael-simple-menu eael-simple-menu-dropdown-animate-zoom-in eael-simple-menu-indicator eael-hamburger-left eael-simple-menu-horizontal">
 												<li id="menu-item-43"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19 current_page_item menu-item-43">
-													<a href="index.html" aria-current="page">Home</a>
+													<a href="{{ url('home') }}" aria-current="page">Home</a>
 												</li>
 												<li id="menu-item-42"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
-													<a href="about-us/index.html">About Us</a>
+													<a href="{{ url('about') }}">About Us</a>
 												</li>
 												<li id="menu-item-41"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">

@@ -6,3 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', 'home');
 Route::get('home', [HomeController::class, "home"]);
+Route::get('about', [HomeController::class, "about"]);
