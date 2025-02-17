@@ -15,4 +15,29 @@ class HomeController extends Controller
     {
         return view('about');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function faq()
+    {
+        return view('faq');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
+
+    public function termsOfUse()
+    {
+        return view('terms-of-use');
+    }
+
+    public function disclaimer()
+    {
+        return view('disclaimer');
+    }
 }

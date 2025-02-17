@@ -672,7 +672,7 @@
 			line-height: 1.6;
 		}
 	</style>
-	<link rel="stylesheet" id="wp-components-css" href="wp-includes/css/dist/components/style.min9704.css?ver=6.7.1"
+	<link rel="stylesheet" id="wp-components-css" href="{{ asset('assets/wp-includes/css/dist/components/style.min9704.css') }}?ver=6.7.1"
 		media="all" />
 	<link rel="stylesheet" id="godaddy-styles-css"
 		href="{{ asset('assets/wp-content/mu-plugins/vendor/wpex/godaddy-launch/includes/Dependencies/GoDaddy/Styles/build/latest4c56.css') }}?ver=2.0.2"
@@ -741,6 +741,18 @@
 		href="{{ asset('assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min6a4d.css') }}?ver=6.1.1" media="all" />
 	<link rel="stylesheet" id="font-awesome-4-shim-css"
 		href="{{ asset('assets/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min6a4d.css') }}?ver=6.1.1" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/uploads/elementor/css/post-219321.css') }}?ver=1739037538" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/uploads/elementor/css/post-227363.css') }}?ver=1739037697" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widget251f.css') }}?ver=5.2.10" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/plugins/fluentform/assets/css/fluent-forms-public251f.css') }}?ver=5.2.10" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/plugins/fluentform/assets/css/fluentform-public-default251f.css') }}?ver=5.2.10" media="all" />
+    <link rel="stylesheet" id="font-awesome-4-shim-css"
+		href="{{ asset('assets/wp-content/uploads/elementor/css/post-227363.css?ver=1739037697') }}?ver=5.2.10" media="all" />
 	<link rel="stylesheet" id="google-fonts-1-css"
 		href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLora%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRed+Hat+Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CNunito%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.7.1"
 		media="all" />
@@ -807,8 +819,7 @@
 	<meta name="msapplication-TileImage" content="https://coded.money/wp-content/uploads/2024/12/icon-SVG.svg" />
 </head>
 
-<body
-	class="home page-template page-template-elementor_header_footer page page-id-19 wp-embed-responsive ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor theme-default elementor-default elementor-template-full-width elementor-kit-9 elementor-page elementor-page-19">
+<body class="home page-template page-template-elementor_header_footer page page-id-19 wp-embed-responsive ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor theme-default elementor-default elementor-template-full-width elementor-kit-9 elementor-page elementor-page-19">
 	<div id="page" class="hfeed site">
 		<header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
 			<p class="main-title bhf-hidden" itemprop="headline">
@@ -878,7 +889,7 @@
 												</li>
 												<li id="menu-item-41"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
-													<a href="contact-us/index.html">Contact Us</a>
+													<a href="{{ url('contact') }}">Contact Us</a>
 												</li>
 											</ul>
 											<button class="eael-simple-menu-toggle">
@@ -1042,37 +1053,32 @@
 																class="elementor-icon-list-items elementor-inline-items">
 																<li
 																	class="elementor-icon-list-item elementor-inline-item">
-																	<a href="index.html">
-																		<span
-																			class="elementor-icon-list-text">Home</span>
+																	<a href="{{ url('home') }}">
+																		<span class="elementor-icon-list-text">Home</span>
 																	</a>
 																</li>
 																<li
 																	class="elementor-icon-list-item elementor-inline-item">
-																	<a href="faq/index.html">
-																		<span
-																			class="elementor-icon-list-text">FAQ</span>
+																	<a href="{{ url('faq') }}">
+																		<span class="elementor-icon-list-text">FAQ</span>
 																	</a>
 																</li>
 																<li
 																	class="elementor-icon-list-item elementor-inline-item">
-																	<a href="privacy-policy/index.html">
-																		<span class="elementor-icon-list-text">Privacy
-																			Policy</span>
+																	<a href="{{ url('privacy-policy') }}">
+																		<span class="elementor-icon-list-text"> Privacy Policy </span>
 																	</a>
 																</li>
 																<li
 																	class="elementor-icon-list-item elementor-inline-item">
-																	<a href="terms-of-use/index.html">
-																		<span class="elementor-icon-list-text">Terms of
-																			Use</span>
+																	<a href="{{ url('terms-of-use') }}">
+																		<span class="elementor-icon-list-text">Terms of Use</span>
 																	</a>
 																</li>
 																<li
 																	class="elementor-icon-list-item elementor-inline-item">
-																	<a href="disclaimer/index.html">
-																		<span
-																			class="elementor-icon-list-text">Disclaimer</span>
+																	<a href="{{ url('disclaimer') }}">
+																		<span class="elementor-icon-list-text">Disclaimer</span>
 																	</a>
 																</li>
 															</ul>
@@ -1451,10 +1457,10 @@
 				{ wp_alloptions_bytes: "48348" },
 				{ gdl_coming_soon_page: "0" }
 			);
-		var trafficScript = document.createElement("script");
-		trafficScript.src =
-			"../img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js";
-		window.document.head.appendChild(trafficScript);
+		// var trafficScript = document.createElement("script");
+		// trafficScript.src =
+		// 	"../img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js";
+		// window.document.head.appendChild(trafficScript);
 	</script>
 	<script>
 		window.addEventListener("click", function (elem) {
@@ -1481,7 +1487,7 @@
 			);
 		});
 	</script>
-	<script src="{{ asset('assets/../img1.wsimg.com/signals/js/clients/tti/tti.min.js') }}" onload="window.tti.calculateTTI()"></script>
+	{{-- <script src="{{ asset('assets/../img1.wsimg.com/signals/js/clients/tti/tti.min.js') }}" onload="window.tti.calculateTTI()"></script> --}}
 </body>
 
 <!-- Mirrored from coded.money/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2025 06:37:49 GMT -->
