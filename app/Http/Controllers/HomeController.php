@@ -40,4 +40,9 @@ class HomeController extends Controller
     {
         return view('disclaimer');
     }
+
+    public function exchange()
+    {
+        return view('exchange');
+    }
 }

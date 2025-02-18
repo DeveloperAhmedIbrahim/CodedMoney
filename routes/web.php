@@ -12,3 +12,4 @@ Route::get('faq', [HomeController::class, "faq"]);
 Route::get('privacy-policy', [HomeController::class, "privacyPolicy"]);
 Route::get('terms-of-use', [HomeController::class, "termsOfUse"]);
 Route::get('disclaimer', [HomeController::class, "disclaimer"]);
+Route::get('exchange', [HomeController::class, "exchange"]);
