@@ -881,15 +881,15 @@
 												class="eael-simple-menu eael-simple-menu-dropdown-animate-zoom-in eael-simple-menu-indicator eael-hamburger-left eael-simple-menu-horizontal">
 												<li id="menu-item-43"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19 current_page_item menu-item-43">
-													<a href="{{ url('home') }}" aria-current="page">Home</a>
+													<a href="{{ route('home') }}" aria-current="page">Home</a>
 												</li>
 												<li id="menu-item-42"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
-													<a href="{{ url('about') }}">About Us</a>
+													<a href="{{ route('about') }}">About Us</a>
 												</li>
 												<li id="menu-item-41"
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
-													<a href="{{ url('contact') }}">Contact Us</a>
+													<a href="{{ route('contact') }}">Contact Us</a>
 												</li>
 											</ul>
 											<button class="eael-simple-menu-toggle">
@@ -915,7 +915,7 @@
 									<div class="elementor-widget-container">
 										<div class="eael-creative-button-wrapper">
 											<a class="eael-creative-button eael-creative-button--moema"
-												href="exchange/index.html" target="_blank" data-text="Exchange">
+												href="{{ route('exchange') }}" data-text="Exchange">
 												<div class="creative-button-inner">
 													<span class="cretive-button-text">Exchange</span>
 												</div>
@@ -990,7 +990,7 @@
 														<div class="elementor-widget-container">
 															<div class="elementor-button-wrapper">
 																<a class="elementor-button elementor-button-link elementor-size-md elementor-animation-grow"
-																	href="exchange/index.html" target="_blank">
+																	href="{{ route('exchange') }}">
 																	<span class="elementor-button-content-wrapper">
 																		<span
 																			class="elementor-button-text">Exchange</span>
