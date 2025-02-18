@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-
 use App\Services\RsaSignatureService;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class PaybisController extends Controller
 {
@@ -121,7 +122,8 @@ class PaybisController extends Controller
     public function widgetRequest()
     {
         $data = array();
-        $userId = (string) Str::uuid();
+
+        $paybisUid = Auth::user()->paybis_uid;
 
         $curl = curl_init();
 
@@ -134,7 +136,7 @@ class PaybisController extends Controller
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => "POST",
           CURLOPT_POSTFIELDS => json_encode([
-            'partnerUserId' => "{$userId}",
+            'partnerUserId' => "{$paybisUid}",
             'locale' => 'en',
             'passwordless' => false,
             // 'cryptoPaymentMethod' => 'partner_controlled_with_sdk_event',

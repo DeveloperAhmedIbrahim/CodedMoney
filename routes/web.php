@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaybisController;
 use App\Http\Middleware\Authentication;
 use Illuminate\Support\Facades\Route;
+
 
 
 Route::redirect('/', 'home');
@@ -20,6 +22,7 @@ Route::match(['GET', 'POST'], 'sign-up', [AuthController::class, "signUp"])->nam
 
 Route::middleware(Authentication::class)->group(function() {
     Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
+    Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
 });
 
 

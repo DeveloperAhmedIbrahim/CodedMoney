@@ -20,9 +20,44 @@
             }
         }();
 
-        window.PartnerExchangeWidget.open({
-            requestId: '2b5866b5-3f0f-46ad-acc6-11f971151715',
+        async function widgetRequest() {
+            try {
+                const response = await fetch("{{ route('widgetRequest') }}", {
+                    headers: {
+                        'accept': 'application/json'
+                    },
+                    method: 'GET',
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                return result; // Return the parsed JSON data
+            } catch (error) {
+                console.error("Fetch error:", error.message);
+                return null; // Return a fallback value on error
+            }
+        }
+
+        // Call the function and handle the result
+        widgetRequest().then(result => {
+            console.log("Result:", result); // Works here
+            window.PartnerExchangeWidget.open({
+                requestId: result.data.requestId,
+            });
         });
+
+        // // OR: Use inside another async function
+        // async function main() {
+        //     const result = await widgetRequest();
+        //     console.log("Result:", result.data.requestId);
+        // }
+
+        // main();
+
+
     </script>
 
 

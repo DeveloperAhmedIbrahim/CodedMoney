@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -43,11 +44,14 @@ class AuthController extends Controller
                 'password' => 'required|confirmed',
             ]);
 
+            $userId = (string) Str::uuid();
+
             $user = new User();
             $user->first_name = $request->firstName;
             $user->last_name = $request->lastName;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
+            $user->paybis_uid = $userId;
             $user->save();
 
             return redirect()->route('login')->with('success', 'Your account created successfully!');
