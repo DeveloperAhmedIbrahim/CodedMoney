@@ -17,8 +17,7 @@
 		}
 	</style>
 	<link rel="alternate" type="application/rss+xml" title="Coded.money &raquo; Feed" href="feed/index.html" />
-	<link rel="alternate" type="application/rss+xml" title="Coded.money &raquo; Comments Feed"
-		href="comments/feed/index.html" />
+	<link rel="alternate" type="application/rss+xml" title="Coded.money &raquo; Comments Feed" href="comments/feed/index.html" />
 	<script>
 		window._wpemojiSettings = {
 			baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
@@ -180,8 +179,7 @@
 						}));
 		})((window, document), window._wpemojiSettings);
 	</script>
-	<link rel="stylesheet" id="hfe-widgets-style-css"
-		href="{{ asset('assets/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend3601.css') }}?ver=2.2.0" media="all" />
+	<link rel="stylesheet" id="hfe-widgets-style-css" href="{{ asset('assets/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend3601.css') }}?ver=2.2.0" media="all" />
 	<style id="wp-emoji-styles-inline-css">
 		img.wp-smiley,
 		img.emoji {

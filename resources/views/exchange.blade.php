@@ -1,7 +1,16 @@
-@extends('layout')
-@section('title', 'Exchange')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exchange | Coded Money</title>
+    <link rel="icon" href="{{ asset('assets/wp-content/uploads/2024/12/icon-SVG.svg') }}" sizes="32x32" />
+	<link rel="icon" href="{{ asset('assets/wp-content/uploads/2024/12/icon-SVG.svg') }}" sizes="192x192" />
+	<link rel="apple-touch-icon" href="{{ asset('assets/wp-content/uploads/2024/12/icon-SVG.svg') }}" />
+</head>
+<body>
 
-@section('content')
     <script>
         ! function() {
             if (window.PartnerExchangeWidget = window.PartnerExchangeWidget || {
@@ -34,31 +43,24 @@
                 }
 
                 const result = await response.json();
-                return result; // Return the parsed JSON data
+                return result;
             } catch (error) {
                 console.error("Fetch error:", error.message);
-                return null; // Return a fallback value on error
+                return null;
             }
         }
 
-        // Call the function and handle the result
         widgetRequest().then(result => {
-            console.log("Result:", result); // Works here
+            console.log("Result:", result);
+            window.PartnerExchangeWidget.events.onclosed = function (e) {
+                window.location.href = "{{ route('home') }}";
+            };
             window.PartnerExchangeWidget.open({
                 requestId: result.data.requestId,
             });
         });
 
-        // // OR: Use inside another async function
-        // async function main() {
-        //     const result = await widgetRequest();
-        //     console.log("Result:", result.data.requestId);
-        // }
-
-        // main();
-
-
     </script>
 
-
-@endsection
+</body>
+</html>

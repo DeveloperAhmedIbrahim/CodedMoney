@@ -21,6 +21,8 @@ class PaybisController extends Controller
     {
         $data = array();
 
+
+        $email = Auth::user()->email;
         $paybisUid = Auth::user()->paybis_uid;
 
         $curl = curl_init();
@@ -35,6 +37,7 @@ class PaybisController extends Controller
           CURLOPT_CUSTOMREQUEST => "POST",
           CURLOPT_POSTFIELDS => json_encode([
             'partnerUserId' => "{$paybisUid}",
+            'email' => "{$email}",
             'locale' => 'en',
             'passwordless' => false,
             // 'cryptoPaymentMethod' => 'partner_controlled_with_sdk_event',
