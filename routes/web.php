@@ -23,6 +23,7 @@ Route::match(['GET', 'POST'], 'sign-up', [AuthController::class, "signUp"])->nam
 Route::middleware(Authentication::class)->group(function() {
     Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
     Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
+    Route::get('rsa-signature', [PaybisController::class, "rsaSignature"])->name('rsaSignature');
 });
 
 

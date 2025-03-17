@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\PaybisSession;
+use App\Services\RsaSignatureService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 
 class PaybisController extends Controller
 {
     protected $rsaSignature;
     protected $privateKey;
 
-    public function __construct()
+    public function __construct(RsaSignatureService $rsaSignature)
     {
-        // $this->rsaSignature = $rsaSignature;
-        $this->privateKey = env('PAYBIS_PRIVATE_KEY');
+        $this->rsaSignature = $rsaSignature;
+        $this->privateKey = Config::get('app.paybis.private_key');
     }
 
     public function widgetRequest()
@@ -27,6 +29,15 @@ class PaybisController extends Controller
 
         $curl = curl_init();
 
+        $requestBody = json_encode([
+            'partnerUserId' => "{$paybisUid}",
+            'email' => "{$email}",
+            'locale' => 'en',
+            'passwordless' => false,
+        ]);
+
+        $signature = $this->rsaSignature->signRequestBody($requestBody);
+
         curl_setopt_array($curl, [
           CURLOPT_URL => "https://widget-api.sandbox.paybis.com/v2/request",
           CURLOPT_RETURNTRANSFER => true,
@@ -35,15 +46,10 @@ class PaybisController extends Controller
           CURLOPT_TIMEOUT => 30,
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS => json_encode([
-            'partnerUserId' => "{$paybisUid}",
-            'email' => "{$email}",
-            'locale' => 'en',
-            'passwordless' => false,
-            // 'cryptoPaymentMethod' => 'partner_controlled_with_sdk_event',
-          ]),
+          CURLOPT_POSTFIELDS => $requestBody,
           CURLOPT_HTTPHEADER => [
             "Authorization: {$this->privateKey}",
+            "X-Request-Signature: {$signature}",
             "accept: application/json",
             "content-type: application/json"
           ],
@@ -75,6 +81,27 @@ class PaybisController extends Controller
             "status" => $status,
             "data" => $data,
             "message" => $message,
+        ]);
+    }
+
+    public function rsaSignature()
+    {
+        $email = Auth::user()->email;
+        $paybisUid = Auth::user()->paybis_uid;
+
+        // Example request body.
+        $requestBody = json_encode([
+            'partnerUserId' => "{$paybisUid}",
+            'email' => "{$email}",
+            'locale' => 'en',
+            'passwordless' => false,
+        ]);
+
+        $signature = $this->rsaSignature->signRequestBody($requestBody);
+
+        return response()->json([
+            "signature" => $signature,
+            "requestBody" => $requestBody,
         ]);
     }
 }

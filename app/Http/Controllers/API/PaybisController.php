@@ -20,24 +20,24 @@ class PaybisController extends Controller
         $this->privateKey = env('PAYBIS_PRIVATE_KEY');
     }
 
-    // public function sign()
-    // {
-    //     // Example request body.
-    //     $requestBody = json_encode([
-    //         "partnerUserId" => "1bc166bd-1808-4009-8454-aceb47ba8753",
-    //         "cryptoWalletAddress" => null,
-    //         "email" => "doe.john@paybis.com",
-    //         "applicantSumsubToken" => "token_hash",
-    //         "locale" => "en"
-    //     ]);
+    public function sign()
+    {
+        // Example request body.
+        $requestBody = json_encode([
+            "partnerUserId" => "1bc166bd-1808-4009-8454-aceb47ba8753",
+            "cryptoWalletAddress" => null,
+            "email" => "doe.john@paybis.com",
+            "applicantSumsubToken" => "token_hash",
+            "locale" => "en"
+        ]);
 
-    //     $signature = $this->rsaSignature->signRequestBody($requestBody);
+        $signature = $this->rsaSignature->signRequestBody($requestBody);
 
-    //     return response()->json([
-    //         "signature" => $signature,
-    //         "requestBody" => $requestBody,
-    //     ]);
-    // }
+        return response()->json([
+            "signature" => $signature,
+            "requestBody" => $requestBody,
+        ]);
+    }
 
     public function currpairsBuyCrypto()
     {
