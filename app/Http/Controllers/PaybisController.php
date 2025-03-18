@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PaybisSession;
+use App\Models\User;
 use App\Services\RsaSignatureService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -103,5 +104,27 @@ class PaybisController extends Controller
             "signature" => $signature,
             "requestBody" => $requestBody,
         ]);
+    }
+
+    public function profile(Request $request)
+    {
+        if($request->method() === "POST") {
+            $request->validate([
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'email' => 'required|email|unique:users,email,'.Auth::user()->id.',id',
+            ]);
+
+            $user = User::find(Auth::user()->id);
+            $user->first_name = $request->first_name;
+            $user->last_name = $request->last_name;
+            $user->email = $request->email;
+            $user->save();
+
+            return redirect()->route('profile')->with('success', 'Your profile info updated!');
+        } else {
+            $user = Auth::user();
+            return view('profile', compact('user'));
+        }
     }
 }

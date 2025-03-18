@@ -59,4 +59,10 @@ class AuthController extends Controller
 
         return view('sign-up');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }

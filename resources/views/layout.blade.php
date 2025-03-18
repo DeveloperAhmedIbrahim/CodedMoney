@@ -810,6 +810,23 @@
 				background-image: none !important;
 			}
 		}
+        .user-menu {
+            width: 160px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: column;
+            position: absolute;
+            right: 0px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0px 15px 35px -10px #5C6680;
+            z-index: 1;
+            gap: 10px;
+            display: none;
+        }
 	</style>
 	<link rel="icon" href="{{ asset('assets/wp-content/uploads/2024/12/icon-SVG.svg') }}" sizes="32x32" />
 	<link rel="icon" href="{{ asset('assets/wp-content/uploads/2024/12/icon-SVG.svg') }}" sizes="192x192" />
@@ -907,7 +924,7 @@
 						<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-155508ec"
 							data-id="155508ec" data-element_type="column">
 							<div class="elementor-widget-wrap elementor-element-populated">
-								<div class="elementor-element elementor-element-1c3e7880 elementor-widget elementor-widget-eael-creative-button"
+								<div style="position: relative" class="elementor-element elementor-element-1c3e7880 elementor-widget elementor-widget-eael-creative-button"
 									data-id="1c3e7880" data-element_type="widget"
 									data-widget_type="eael-creative-button.default">
 									<div class="elementor-widget-container">
@@ -918,8 +935,32 @@
 													<span class="cretive-button-text">Exchange</span>
 												</div>
 											</a>
+                                            @auth
+                                                <a class="eael-creative-button eael-creative-button--moema"
+                                                    style="min-width: 50px; margin-left: 10px;"
+                                                    href="javscript:void(0)" onclick="document.querySelector('.user-menu').style.display = document.querySelector('.user-menu').style.display === 'none' ? 'flex' : 'none'">
+                                                    <div class="creative-button-inner">
+                                                        <span class="cretive-button-text"><i class="fas fa-user"></i></span>
+                                                    </div>
+                                                </a>
+                                            @endauth
 										</div>
 									</div>
+                                    @auth
+                                        <div class="user-menu">
+                                            <div style="color: #5C6680">
+                                                <b>
+                                                    {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
+                                                </b>
+                                            </div>
+                                            <hr>
+                                            <a href="{{ route('profile') }}" style="color: #5C6680">Profile</a>
+                                            <hr>
+                                            <a href="{{ route('orders') }}" style="color: #5C6680">Orders</a>
+                                            <hr>
+                                            <a href="{{ route('logout') }}" style="color: orangered">Logout</a>
+                                        </div>
+                                    @endauth
 								</div>
 							</div>
 						</div>

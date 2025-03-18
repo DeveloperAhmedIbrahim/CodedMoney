@@ -19,11 +19,14 @@ Route::get('disclaimer', [HomeController::class, "disclaimer"])->name('disclaime
 
 Route::match(['GET', 'POST'], 'login', [AuthController::class, "login"])->name('login');
 Route::match(['GET', 'POST'], 'sign-up', [AuthController::class, "signUp"])->name('signUp');
+Route::get('logout', [AuthController::class, "logout"])->name('logout');
 
 Route::middleware(Authentication::class)->group(function() {
     Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
     Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
     Route::get('rsa-signature', [PaybisController::class, "rsaSignature"])->name('rsaSignature');
+    Route::match(['get', 'post'], 'profile', [PaybisController::class, "profile"])->name('profile');
+    Route::get('orders', [PaybisController::class, "orders"])->name('orders');
 });
 
 
