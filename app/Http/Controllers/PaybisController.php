@@ -13,18 +13,18 @@ class PaybisController extends Controller
 {
     protected $rsaSignature;
     protected $privateKey;
+    protected $paybisBaseUrl;
 
     public function __construct(RsaSignatureService $rsaSignature)
     {
         $this->rsaSignature = $rsaSignature;
         $this->privateKey = Config::get('app.paybis.private_key');
+        $this->paybisBaseUrl = Config::get('app.paybis.base_url');
     }
 
     public function widgetRequest()
     {
         $data = array();
-
-
         $email = Auth::user()->email;
         $paybisUid = Auth::user()->paybis_uid;
 
@@ -40,7 +40,7 @@ class PaybisController extends Controller
         $signature = $this->rsaSignature->signRequestBody($requestBody);
 
         curl_setopt_array($curl, [
-          CURLOPT_URL => "https://widget-api.sandbox.paybis.com/v2/request",
+          CURLOPT_URL => "{$this->paybisBaseUrl}/v2/request",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
@@ -125,6 +125,50 @@ class PaybisController extends Controller
         } else {
             $user = Auth::user();
             return view('profile', compact('user'));
+        }
+    }
+
+    public function orders(Request $request)
+    {
+        $curl = curl_init();
+        $requestBody = [
+            'email' => Auth::user()->email,
+            'partnerUserId' => Auth::user()->paybis_uid,
+            'limit' => 1,
+            'cursor' => $request->pointer ?? null,
+        ];
+
+        $signature = $this->rsaSignature->signRequestBody(json_encode($requestBody));
+
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "{$this->paybisBaseUrl}/v2/transactions?".http_build_query($requestBody),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => [
+                "Authorization: {$this->privateKey}",
+                "X-Request-Signature: {$signature}",
+                "Accept: application/json",
+                "Content-Type: application/json"
+            ],
+        ]);
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+            dd("cURL Error #:" . $err);
+        } else {
+            $response = json_decode($response, true);
+            $transactions = $response['data'];
+            $prevPointer = $response["meta"]['currentCursor'];
+            $nextPointer = $response["meta"]['nextCursor'];
+            return view('orders', compact('transactions', 'prevPointer', 'nextPointer'));
         }
     }
 }

@@ -122,8 +122,9 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
-    
+
     'paybis' => [
         'private_key' => env('PAYBIS_PRIVATE_KEY'),
+        'base_url' => env('PAYBIS_BASE_URL_SANDBOX'),
     ],
 ];
