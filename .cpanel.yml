@@ -1,0 +1,5 @@
+---
+deployment:
+    task:
+    - export DEPLOYPATH=/home2/techrev2/coded.money.techrevivals.net
+    - /bin/cp * $DEPLOYPATH
