@@ -52,10 +52,7 @@
                         <div class="elementor-widget-container">
                             <img decoding="async" width="923" height="965"
                                 src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="
-                https://coded.money/wp-content/uploads/2024/12/widget.png         923w,
-                https://coded.money/wp-content/uploads/2024/12/widget-287x300.png 287w,
-                https://coded.money/wp-content/uploads/2024/12/widget-768x803.png 768w" sizes="(max-width: 923px) 100vw, 923px" />
+                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
                         </div>
                     </div>
                 </div>
@@ -287,11 +284,7 @@
                         <div class="elementor-widget-container">
                             <img decoding="async" width="923" height="965"
                                 src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="
-                https://coded.money/wp-content/uploads/2024/12/widget.png         923w,
-                https://coded.money/wp-content/uploads/2024/12/widget-287x300.png 287w,
-                https://coded.money/wp-content/uploads/2024/12/widget-768x803.png 768w
-              " sizes="(max-width: 923px) 100vw, 923px" />
+                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-8352ddf elementor-invisible elementor-widget elementor-widget-image"
@@ -300,11 +293,7 @@
                         <div class="elementor-widget-container">
                             <img decoding="async" width="923" height="965"
                                 src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="
-                https://coded.money/wp-content/uploads/2024/12/widget.png         923w,
-                https://coded.money/wp-content/uploads/2024/12/widget-287x300.png 287w,
-                https://coded.money/wp-content/uploads/2024/12/widget-768x803.png 768w
-              " sizes="(max-width: 923px) 100vw, 923px" />
+                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
                         </div>
                     </div>
                 </div>
@@ -318,11 +307,7 @@
                         <div class="elementor-widget-container">
                             <img decoding="async" width="923" height="965"
                                 src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="
-                https://coded.money/wp-content/uploads/2024/12/widget.png         923w,
-                https://coded.money/wp-content/uploads/2024/12/widget-287x300.png 287w,
-                https://coded.money/wp-content/uploads/2024/12/widget-768x803.png 768w
-              " sizes="(max-width: 923px) 100vw, 923px" />
+                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-3ac1eb55 elementor-invisible elementor-widget elementor-widget-image"
@@ -333,12 +318,8 @@
                                 data-elementor-lightbox-title="widget"
                                 data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTE5LCJ1cmwiOiJodHRwczpcL1wvY29kZWQubW9uZXlcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjRcLzEyXC93aWRnZXQucG5nIn0%3D">
                                 <img decoding="async" width="923" height="965"
-                                    src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}') }}"
-                                    class="attachment-full size-full wp-image-119" alt="" srcset="
-                  https://coded.money/wp-content/uploads/2024/12/widget.png         923w,
-                  https://coded.money/wp-content/uploads/2024/12/widget-287x300.png 287w,
-                  https://coded.money/wp-content/uploads/2024/12/widget-768x803.png 768w
-                " sizes="(max-width: 923px) 100vw, 923px" />
+                                    src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
+                                    class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
                             </a>
                         </div>
                     </div>

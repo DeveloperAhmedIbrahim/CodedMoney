@@ -71,12 +71,7 @@
                                         <div class="elementor-widget-container">
                                             <img decoding="async" width="1260" height="1448"
                                                 src="{{ asset('assets/wp-content/uploads/2024/12/a1ffcde9-mission-vission-2%402x.jpg') }}"
-                                                class="attachment-full size-full wp-image-153" alt="" srcset="
-                        https://coded.money/wp-content/uploads/2024/12/a1ffcde9-mission-vission-2@2x.jpg          1260w,
-                        https://coded.money/wp-content/uploads/2024/12/a1ffcde9-mission-vission-2@2x-261x300.jpg   261w,
-                        https://coded.money/wp-content/uploads/2024/12/a1ffcde9-mission-vission-2@2x-891x1024.jpg  891w,
-                        https://coded.money/wp-content/uploads/2024/12/a1ffcde9-mission-vission-2@2x-768x883.jpg   768w
-                      " sizes="(max-width: 1260px) 100vw, 1260px" />
+                                                class="attachment-full size-full wp-image-153" alt="" srcset="" />
                                         </div>
                                     </div>
                                 </div>

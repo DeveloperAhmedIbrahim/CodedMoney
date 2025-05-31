@@ -125,6 +125,6 @@ return [
 
     'paybis' => [
         'private_key' => env('PAYBIS_PRIVATE_KEY'),
-        'base_url' => env('PAYBIS_BASE_URL_SANDBOX'),
+        'base_url' => env('PAYBIS_BASE_URL_LIVE', 'https://widget-api.paybis.com'),
     ],
 ];

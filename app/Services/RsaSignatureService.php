@@ -12,7 +12,7 @@ class RsaSignatureService
     public function __construct()
     {
         // Store your private key here.
-        $this->privateKey = file_get_contents(Storage::path('paybis_rsa'));
+        $this->privateKey = file_get_contents(Storage::path('private.key'));
     }
 
     /**
