@@ -1,3 +1,4 @@
+
 @extends('layout')
 @section('title', 'Login')
 
@@ -45,6 +46,9 @@
                             @if(Session::has('error'))
                                 <span class="text-danger">{{ Session::get('error') }}</span>
                             @endif
+                            <span class="text-danger">
+                                <a href="{{ route('forgotPassword') }}" class="float-end">Forgot Password</a>
+                            </span>
                         </div>
                         <div class="form-group col-md-12">
                             <button type="submit" class="btn btn-dark rounded-pill py-2"  style="width: 100%;">

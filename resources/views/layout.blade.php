@@ -938,7 +938,12 @@
                                             @auth
                                                 <a class="eael-creative-button eael-creative-button--moema"
                                                     style="min-width: 50px; margin-left: 10px;"
-                                                    href="javscript:void(0)" onclick="document.querySelector('.user-menu').style.display = document.querySelector('.user-menu').style.display === 'none' ? 'flex' : 'none'">
+                                                    href="javscript:void(0)" 
+													onclick=" const menu = document.querySelector('.user-menu');
+														// Use getComputedStyle to see if it's currently hidden in the browser
+														const isHidden = window.getComputedStyle(menu).display === 'none';
+														menu.style.display = isHidden ? 'flex' : 'none';
+													">
                                                     <div class="creative-button-inner">
                                                         <span class="cretive-button-text"><i class="fas fa-user"></i></span>
                                                     </div>
