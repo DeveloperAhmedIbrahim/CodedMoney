@@ -49,11 +49,17 @@
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-1eea8cef elementor-widget elementor-widget-image"
                         data-id="1eea8cef" data-element_type="widget" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="923" height="965"
-                                src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
-                        </div>
+                        @auth
+                            <div class="elementor-widget-container" id="paybis-widget" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 600px; background-color: rgba(200, 200, 200, 0.2);">
+
+                            </div>
+                        @else
+                            <div class="elementor-widget-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 80vh; background-color: rgba(200, 200, 200, 0.2);">
+                                <div class="elementor-button elementor-button-link elementor-size-md elementor-animation-grow" style="background-color: white; box-shadow: 0px 15px 35px -10px #5C6680;">
+									<a href="{{ route('login') }}" class="cta-button" style="color: #334A75;">Login To Access Widget</a>
+								</div>
+                            </div>
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -828,4 +834,55 @@
     </section>
 </div>
 
+
+<script>
+    !function() {
+        if (window.PartnerExchangeWidget = window.PartnerExchangeWidget || {
+                open(e) {
+                    window.partnerWidgetSettings = {
+                        immediateOpen: e
+                    }
+                }
+            }, "PartnerExchangeWidget" !== window.PartnerExchangeWidget.constructor.name) {
+            (() => {
+                const e = document.createElement("script");
+                e.type = "text/javascript", e.defer = !0, e.src = "https://widget.sandbox.paybis.com/partner-exchange-widget.js";
+                const t = document.getElementsByTagName("script")[0];
+                t.parentNode.insertBefore(e, t)
+            })()
+        }
+    }();
+
+    async function widgetRequest() {
+        try {
+            const response = await fetch("{{ route('widgetRequest') }}", {
+                headers: {
+                    'accept': 'application/json'
+                },
+                method: 'GET',
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error("Fetch error:", error.message);
+            return null;
+        }
+    }
+
+    widgetRequest().then(result => {
+        console.log("Result:", result);
+        window.PartnerExchangeWidget.events.onclosed = function (e) {
+            window.location.href = "{{ route('home') }}";
+        };
+        window.PartnerExchangeWidget.openInEmbed(
+            { requestId: result.data.requestId },
+            document.getElementById('paybis-widget')
+        );
+    });
+</script>
 @endsection
