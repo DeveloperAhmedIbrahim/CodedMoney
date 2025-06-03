@@ -134,7 +134,7 @@ class PaybisController extends Controller
         $requestBody = [
             'email' => Auth::user()->email,
             'partnerUserId' => Auth::user()->paybis_uid,
-            'limit' => 1,
+            'limit' => 5,
             'cursor' => $request->pointer ?? null,
         ];
 
