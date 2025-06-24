@@ -31,7 +31,7 @@ class VerificationMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'CodedMoney Verification',
+            subject: $this->source === "registration" ? 'Account Verification' : 'Reset Password',
         );
     }
 
