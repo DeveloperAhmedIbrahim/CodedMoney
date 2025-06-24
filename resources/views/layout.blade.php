@@ -1069,7 +1069,7 @@
 														<div class="elementor-widget-container">
 															<div class="elementor-button-wrapper">
 																<a class="elementor-button elementor-button-link elementor-size-md elementor-animation-grow"
-																	href="contact-us/index.html" target="_blank">
+																	href="{{ route('contact') }}" target="_blank">
 																	<span class="elementor-button-content-wrapper">
 																		<span
 																			class="elementor-button-text">contact</span>
@@ -1145,7 +1145,7 @@
 														<div class="elementor-widget-container">
 															<div class="eael-dual-header">
 																<p class="title">
-																	<span class="lead solid-color">© 2024 Coded Finance
+																	<span class="lead solid-color">© {{ date('Y') }} Coded Finance
 																		Inc,</span>
 																	<span>all right reserved.</span>
 																</p>

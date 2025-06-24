@@ -68,12 +68,8 @@
     <section
         class="elementor-section elementor-top-section elementor-element elementor-element-cbac313 elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
         data-id="cbac313" data-element_type="section"
-        data-settings='{"background_background":"classic","shape_divider_bottom":"tilt"}'>
-        <div class="elementor-shape elementor-shape-bottom" data-negative="false">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
-            </svg>
-        </div>
+        data-settings='{"background_background":"classic","shape_divider_bottom":"tilt"}'
+        style="padding-bottom: 100px;">
         <div class="elementor-container elementor-column-gap-no">
             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cebbda"
                 data-id="cebbda" data-element_type="column">
@@ -271,68 +267,7 @@
             </div>
         </div>
     </section>
-    <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-7b175949 elementor-section-content-bottom elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="7b175949" data-element_type="section"
-        data-settings='{"background_background":"classic","shape_divider_top":"tilt"}'>
-        <div class="elementor-shape elementor-shape-top" data-negative="false">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" />
-            </svg>
-        </div>
-        <div class="elementor-container elementor-column-gap-no">
-            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-60d530bc"
-                data-id="60d530bc" data-element_type="column">
-                <div class="elementor-widget-wrap elementor-element-populated">
-                    <div class="elementor-element elementor-element-2d4cf5e5 elementor-invisible elementor-widget elementor-widget-image"
-                        data-id="2d4cf5e5" data-element_type="widget" data-settings='{"_animation":"zoomIn"}'
-                        data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="923" height="965"
-                                src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-8352ddf elementor-invisible elementor-widget elementor-widget-image"
-                        data-id="8352ddf" data-element_type="widget" data-settings='{"_animation":"zoomIn"}'
-                        data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="923" height="965"
-                                src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-220b93ce"
-                data-id="220b93ce" data-element_type="column">
-                <div class="elementor-widget-wrap elementor-element-populated">
-                    <div class="elementor-element elementor-element-1949d148 elementor-invisible elementor-widget elementor-widget-image"
-                        data-id="1949d148" data-element_type="widget" data-settings='{"_animation":"zoomIn"}'
-                        data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="923" height="965"
-                                src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-3ac1eb55 elementor-invisible elementor-widget elementor-widget-image"
-                        data-id="3ac1eb55" data-element_type="widget" data-settings='{"_animation":"zoomIn"}'
-                        data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <a href="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}" data-elementor-open-lightbox="yes"
-                                data-elementor-lightbox-title="widget"
-                                data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTE5LCJ1cmwiOiJodHRwczpcL1wvY29kZWQubW9uZXlcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjRcLzEyXC93aWRnZXQucG5nIn0%3D">
-                                <img decoding="async" width="923" height="965"
-                                    src="{{ asset('assets/wp-content/uploads/2024/12/widget.png') }}"
-                                    class="attachment-full size-full wp-image-119" alt="" srcset="" sizes="(max-width: 923px) 100vw, 923px" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section
         class="elementor-section elementor-top-section elementor-element elementor-element-5f565cd0 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
         data-id="5f565cd0" data-element_type="section" data-settings='{"background_background":"classic"}'>
