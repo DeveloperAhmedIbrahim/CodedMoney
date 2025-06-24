@@ -38,7 +38,7 @@
             <li><strong>Service</strong> refers to the Website.</li>
             <li><strong>You</strong> means the individual accessing the Service, or the company, or other legal
                 entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
-            <li><strong>Website</strong> refers to Coded Finance Inc, accessible from <a href="../index.html"
+            <li><strong>Website</strong> refers to Coded Finance Inc, accessible from <a href="{{ route('home') }}"
                     target="_blank" rel="external nofollow noopener">https://coded.money/</a></li>
         </ul>
         <h2>Disclaimer</h2>
@@ -98,8 +98,7 @@
         <h2>Contact Us</h2>
         <p>If you have any questions about this Disclaimer, You can contact Us:</p>
         <ul>
-            <li>By email: <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                    data-cfemail="6c1f191c1c031e182c0f03080908420103020915">[email&#160;protected]</a></li>
+            <li>By email: <a href="mailto:support@coded.money" >support@coded.money</a></li>
         </ul>
 
 

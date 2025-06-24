@@ -439,8 +439,7 @@
                 <p>
                     If you wish to raise a complaint on how we have handled your
                     Personal Information, please contact us directly at
-                    <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                        data-cfemail="186b6d6868776a6c587b777c7d7c367577767d61">[email&#160;protected]</a>
+                    <a href="mailto:support@coded.money" >support@coded.money</a>
                 </p>
                 <p>
                     If you are not satisfied with our response or believe we are
@@ -498,8 +497,7 @@
                     If you feel that your privacy was treated in discordance with
                     our policy, or if any person attempted to abuse the Services or
                     acted in an inappropriate manner, please contact us directly at 
-                    <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                        data-cfemail="f4878184849b8680b4979b909190da999b9a918d">[email&#160;protected]</a>
+                    <a href="mailto:support@coded.money" >support@coded.money</a>
                 </p>
                 <h2><strong>10. Marketing</strong></h2>
                 <p>
@@ -514,8 +512,7 @@
                     further marketing offers from us. In addition, at any time, you
                     may request to unsubscribe and discontinue receiving marketing
                     offers by sending us a blank message with the word “remove” to
-                    <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                        data-cfemail="1b686e6b6b74696f5b78747f7e7f357674757e62">[email&#160;protected]</a>
+                    <a href="mailto:support@coded.money" >support@coded.money</a>
                 </p>
                 <p>
                     Please note that even if you unsubscribe from our marketing
@@ -545,9 +542,7 @@
                     their information, we will discard such information. If you have
                     any reason to believe that a minor has shared any information
                     with us, please contact us at
-                    <a href="../cdn-cgi/l/email-protection.html#9cefe9ececf3eee8dcfff3f8f9f8b2f1f3f2f9e5"><span
-                            class="__cf_email__"
-                            data-cfemail="681b1d1818071a1c280b070c0d0c460507060d11">[email&#160;protected]</span></a>.
+                    <a href="mailto:support@coded.money" >support@coded.money</a>.
                 </p>
                 <h2><strong>13. Cookies</strong></h2>
                 <p>
@@ -581,10 +576,7 @@
                 <p>
                     If you have any general questions regarding the Services or the
                     information that we collect about you and how we use it, please
-                    contact us at<a
-                        href="../cdn-cgi/l/email-protection.html#88fbfdf8f8e7fafcc8ebe7ecedeca6e5e7e6edf1">
-                        <span class="__cf_email__"
-                            data-cfemail="40333530302f323400232f2425246e2d2f2e2539">[email&#160;protected]</span></a>
+                    contact us at <a href="mailto:support@coded.money" >support@coded.money</a>
                 </p>
             </div>
         </div>

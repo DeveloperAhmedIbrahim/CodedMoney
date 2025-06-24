@@ -31,7 +31,7 @@
                                 class="T3"> or </span><span class="T2">&#8220;Terms&#8221;</span><span
                                 class="T3">) govern your use of the Coded Finance Inc website, accessible at
                             </span><span class="T5"><a
-                                    href="../index.html">https://www.coded.money</a></span><span class="T3">,
+                                    href="{{ route('home') }}">https://www.coded.money</a></span><span class="T3">,
                                 and all associated features and Publications offered therein (collectively,
                                 the </span><span class="T2">&#8220;Site&#8221;</span><span class="T3">). By
                                 using the Site, and/or by consuming the Publications, and/or by using the
@@ -41,7 +41,7 @@
                     </li>
                     <li>
                         <p class="P6"><span class="T3">You acknowledge that the privacy policy on the Site,
-                                accessible </span><a title="" href="../privacy-policy/index.html" target=""
+                                accessible </span><a title="" href="{{ route('privacy-policy') }}" target=""
                                 rel="noopener"><span class="T5">here</span></a><span
                                 class="T3"> (the </span><span class="T2">&#8220;Privacy
                                 Policy&#8221;</span><span class="T3">), is an integral part of these Terms of
@@ -223,9 +223,7 @@
                         <p class="P6"><span class="T3">You are required to notify us immediately of any
                                 unauthorized use of your Account or Login Credentials, suspected compromise of
                                 your Login Credentials, or any other breach of security, by email addressed
-                                to </span><span class="T5"><a href="../cdn-cgi/l/email-protection.html"
-                                    class="__cf_email__"
-                                    data-cfemail="e89b9d9898879a9ca88b878c8d8cc68587868d91">[email&#160;protected]</a></span><span
+                                to </span><span class="T5"> <a href="mailto:support@coded.money" >support@coded.money</a></span><span
                                 class="T3">.</span></p>
                     </li>
                     <li>
@@ -701,9 +699,7 @@
                     <li>
                         <p class="P6"><span class="T4">Termination by you.</span><span class="T3"> You may
                                 terminate your Account at any time by submitting your request to terminate your
-                                Account at </span><span class="T5"><a href="../cdn-cgi/l/email-protection.html"
-                                    class="__cf_email__"
-                                    data-cfemail="3e4d4b4e4e514c4a7e5d515a5b5a105351505b47">[email&#160;protected]</a></span><span
+                                Account at </span><span class="T5"> <a href="mailto:support@coded.money" >support@coded.money</a></span><span
                                 class="T3">. No termination fee shall apply.</span></p>
                     </li>
                     <li>
@@ -1024,9 +1020,7 @@
                     <li>
                         <p class="P6"><span class="T3">If you have any questions, feedbacks or complaints, you
                                 may contact the Company via Coded Finance Inc&#8217;s customer support at
-                            </span><span class="T5"><a href="../cdn-cgi/l/email-protection.html"
-                                    class="__cf_email__"
-                                    data-cfemail="1c6f696c6c736e685c7f73787978327173727965">[email&#160;protected]</a></span><span
+                            </span><span class="T5"> <a href="mailto:support@coded.money" >support@coded.money</a></span><span
                                 class="T3">.</span></p>
                     </li>
                     <li>

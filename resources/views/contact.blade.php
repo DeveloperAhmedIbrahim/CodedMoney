@@ -36,8 +36,7 @@
                                     <h2 class="title">Message us</h2>
                                     <div>
                                         <p>
-                                            <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                                                data-cfemail="3d4e484d4d524f497d5e52595859135052535844">support@coded.money</a>
+                                            <a href="mailto:support@coded.money" >support@coded.money</a>
                                         </p>
                                     </div>
                                 </div>

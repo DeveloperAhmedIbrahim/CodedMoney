@@ -838,7 +838,7 @@
 	<div id="page" class="hfeed site">
 		<header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
 			<p class="main-title bhf-hidden" itemprop="headline">
-				<a href="index.html" title="Coded.money" rel="home">Coded.money</a>
+				<a href="{{ route('home') }}" title="Coded.money" rel="home">Coded.money</a>
 			</p>
 			<div data-elementor-type="wp-post" data-elementor-id="10" class="elementor elementor-10">
 				<section
@@ -852,7 +852,7 @@
 								<div class="elementor-element elementor-element-420eef19 elementor-widget elementor-widget-image"
 									data-id="420eef19" data-element_type="widget" data-widget_type="image.default">
 									<div class="elementor-widget-container">
-										<a href="index.html">
+										<a href="{{ route('home') }}">
 											<img fetchpriority="high" width="625" height="116"
 												src="{{ asset('assets/wp-content/uploads/2024/12/logo_h.svg') }}"
 												class="elementor-animation-shrink attachment-full size-full wp-image-193"
@@ -1003,7 +1003,7 @@
 													</h2>
 												</div>
 												<div class="action">
-													<a href="index.html" class="cta-button">Get Started</a>
+													<a href="{{ route('exchange') }}" class="cta-button">Get Started</a>
 												</div>
 											</div>
 										</div>
