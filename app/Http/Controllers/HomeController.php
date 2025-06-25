@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -16,8 +18,23 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function contact()
+    public function contact(Request $request)
     {
+        if($request->method() === "POST") {
+            $request->validate([
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'email' => 'required|email',
+                'subject' => 'required',
+                'message' => 'required',
+            ]);
+
+            $data = $request->all();
+            $data["name"] = $request->first_name . ' ' . $request->last_name;
+            Mail::to("siddiqui.ahmedibrahim@gmail.com")->send(new ContactMail($data, "reset-password"));
+            return redirect()->back()->with('success', '<strong>Hey, Ahmed Ibrahim</strong><br>Your message has been sent. We will contact you soon.');
+
+        }
         return view('contact');
     }
 

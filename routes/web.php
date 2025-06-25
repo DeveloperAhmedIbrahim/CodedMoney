@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', 'home');
 Route::get('home', [HomeController::class, "home"])->name('home');
 Route::get('about', [HomeController::class, "about"])->name('about');
-Route::get('contact', [HomeController::class, "contact"])->name('contact');
+Route::match(['GET', 'POST'], 'contact', [HomeController::class, "contact"])->name('contact');
 Route::get('faq', [HomeController::class, "faq"])->name('faq');
 Route::get('privacy-policy', [HomeController::class, "privacyPolicy"])->name('privacy-policy');
 Route::get('terms-of-use', [HomeController::class, "termsOfUse"])->name('terms-of-use');
