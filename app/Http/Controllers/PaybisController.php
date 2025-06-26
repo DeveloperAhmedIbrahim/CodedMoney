@@ -65,6 +65,7 @@ class PaybisController extends Controller
         } else {
             $status = true;
             $response = json_decode($response, true);
+            $message = "Widget request call successfull.";
         }
 
         return response()->json([
