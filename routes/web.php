@@ -24,12 +24,16 @@ Route::match(['GET', 'POST'], 'forgot-password', [AuthController::class, "forgot
 Route::match(['GET', 'POST'], 'varify-code/{id}', [AuthController::class, "verifyCode"])->name('verifyCode');
 Route::match(['GET', 'POST'], 'reset-password/{id}', [AuthController::class, "resetPassword"])->name('resetPassword');
 
-Route::middleware(Authentication::class)->group(function() {
-    Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
-    Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
-    Route::get('rsa-signature', [PaybisController::class, "rsaSignature"])->name('rsaSignature');
-    Route::match(['get', 'post'], 'profile', [PaybisController::class, "profile"])->name('profile');
-    Route::get('orders', [PaybisController::class, "orders"])->name('orders');
-});
+Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
+Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
+Route::get('rsa-signature', [PaybisController::class, "rsaSignature"])->name('rsaSignature');
+
+// Route::middleware(Authentication::class)->group(function() {
+//     Route::get('exchange', [HomeController::class, "exchange"])->name('exchange');
+//     Route::get('widget-request', [PaybisController::class, "widgetRequest"])->name('widgetRequest');
+//     Route::get('rsa-signature', [PaybisController::class, "rsaSignature"])->name('rsaSignature');
+//     Route::match(['get', 'post'], 'profile', [PaybisController::class, "profile"])->name('profile');
+//     Route::get('orders', [PaybisController::class, "orders"])->name('orders');
+// });
 
 

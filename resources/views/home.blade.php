@@ -49,7 +49,10 @@
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-1eea8cef elementor-widget elementor-widget-image"
                         data-id="1eea8cef" data-element_type="widget" data-widget_type="image.default">
-                        @auth
+                        <div class="elementor-widget-container" id="paybis-widget" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 600px; background-color: rgba(200, 200, 200, 0.2);">
+
+                        </div>
+                        {{-- @auth
                             <div class="elementor-widget-container" id="paybis-widget" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 600px; background-color: rgba(200, 200, 200, 0.2);">
 
                             </div>
@@ -59,7 +62,7 @@
 									<a href="{{ route('login') }}" class="cta-button" style="color: #334A75;">Login To Access Widget</a>
 								</div>
                             </div>
-                        @endauth
+                        @endauth --}}
                     </div>
                 </div>
             </div>

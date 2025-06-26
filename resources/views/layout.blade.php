@@ -935,7 +935,7 @@
 													<span class="cretive-button-text">Exchange</span>
 												</div>
 											</a>
-                                            @auth
+                                            {{-- @auth
                                                 <a class="eael-creative-button eael-creative-button--moema"
                                                     style="min-width: 50px; margin-left: 10px;"
                                                     href="javscript:void(0)" 
@@ -948,10 +948,10 @@
                                                         <span class="cretive-button-text"><i class="fas fa-user"></i></span>
                                                     </div>
                                                 </a>
-                                            @endauth
+                                            @endauth --}}
 										</div>
 									</div>
-                                    @auth
+                                    {{-- @auth
                                         <div class="user-menu">
                                             <div style="color: #5C6680">
                                                 <b>
@@ -965,7 +965,7 @@
                                             <hr>
                                             <a href="{{ route('logout') }}" style="color: orangered">Logout</a>
                                         </div>
-                                    @endauth
+                                    @endauth --}}
 								</div>
 							</div>
 						</div>
