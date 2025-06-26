@@ -29,10 +29,10 @@ class HomeController extends Controller
                 'message' => 'required',
             ]);
 
-            $data = $request->all();
+            $data = $request->all();    
             $data["name"] = $request->first_name . ' ' . $request->last_name;
-            Mail::to("siddiqui.ahmedibrahim@gmail.com")->send(new ContactMail($data, "reset-password"));
-            return redirect()->back()->with('success', '<strong>Hey, Ahmed Ibrahim</strong><br>Your message has been sent. We will contact you soon.');
+            Mail::to("siddiqui.ahmedibrahim@gmail.com")->send(new ContactMail($data));
+            return redirect()->back()->with('success', "<strong>Hey, {$data["name"]}</strong><br>Your message has been sent. We will contact you soon.");
 
         }
         return view('contact');
