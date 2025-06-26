@@ -248,24 +248,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <div class="elementor-element elementor-element-bcc7d63 elementor-widget elementor-widget-heading"
-                        data-id="bcc7d63" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">
-                                Get your money's worth
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-db4db77 elementor-widget elementor-widget-heading"
-                        data-id="db4db77" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">
-                                Ready to buy crypto? See below how much your money can get
-                                you
-                            </h2>
-                        </div>
-                    </div>
+                    </section>                      
                 </div>
             </div>
         </div>
