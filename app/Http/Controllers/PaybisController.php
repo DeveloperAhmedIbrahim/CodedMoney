@@ -63,6 +63,7 @@ class PaybisController extends Controller
             $status = false;
             $message = "cURL Error #:" . $err;
         } else {
+            $status = true;
             $response = json_decode($response, true);
         }
 
